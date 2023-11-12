@@ -1,0 +1,346 @@
+body {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    background-image: url(imagescw/audience-1868137_1920.jpg);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .topic {
+    background: url(imagescw/popmusiccopy.jpg);
+    padding: 100px;
+    padding-bottom: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Add this line to make the .topic div a positioning context */
+  }
+
+  h1 {
+    position: absolute; /* Position the h1 element absolutely within the .topic div */
+    bottom: 50px; /* Align the h1 element to the bottom */
+    left: 50%; /* Move the h1 element to the horizontal center */
+    transform: translateX(-50%); /* Adjust the horizontal positioning */
+    margin: 0; /* Remove the default margin */
+    font-size: 170px;
+    color: rgb(8, 15, 15);
+  }
+  .introduction {
+    background-color: rgb(134, 138, 138);
+    border: 1px solid black;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 15px;
+    transition: 1s;
+  }
+  .introduction:hover{
+    scale: 101%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px #398d7d;
+  }
+  .sub1 {
+    font-size: 50px;
+    padding-left: 20px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  .introduction p {
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 25px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding-bottom: 40px;
+    color: rgb(8, 8, 8);
+  }
+  .evaluation {
+    display: flex;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: rgb(162, 166, 170);
+    border-radius: 15px;
+    transition: 1s;
+  }
+  .evaluation:hover{
+    scale: 101%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px #2fd5ba;
+  }
+  .evaluation img {
+    height: 700px;
+    width: 500px;
+    border-radius: 10px;
+  }
+  .info {
+    padding-left: 40px;
+    flex-direction: column;
+    padding-right: 40px;
+  }
+  h3 {
+    font-size: 50px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  .evaluation p {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 25px;
+    text-align: justify;
+  }
+  h4 {
+    background-color: rgb(227, 230, 232);
+    font-size: 70px;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    padding: 70px;
+  }
+  .artists .cards {
+    width: 1200px;
+    margin: 50px 100px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 70px;
+    min-height: 100vh;
+  }
+  .artists .cards .card {
+    position: relative;
+    width: 350px;
+    height: 500px;
+  }
+  .artists .cards .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .artists .cards .card .front {
+    transform: perspective(400px) rotateY(0deg);
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+  }
+
+  .artists .cards .card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .artists .cards .card .front h5 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 50px;
+    padding: 20px;
+  }
+
+  .artists .cards .card .back {
+    transform: perspective(400px) rotateY(180deg);
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .artists .cards .card .back p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+  }
+
+  .artists .cards .card:hover .front {
+    transform: perspective(400px) rotateY(180deg);
+  }
+  .artists .cards .card:hover .back {
+    transform: perspective(400px) rotateY(360deg);
+  }
+  .navbar {
+    height: 50px;
+    background-color: rgba(2, 2, 2, 0.147);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid transparent;
+    z-index: 100;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: larger;
+    float: left;
+    display: block;
+    padding: 10px 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    transition: 200ms;
+  }
+  .navbar a:hover {
+    background-color: aliceblue;
+    color: #16806c;
+    scale: 120%;
+  }
+  .navbar img{
+    height: 50px;
+    width: 50px;
+    float: right;
+  }
+  /*.footer .container {
+    max-width: 1170px;
+    margin: auto;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer ul {
+    list-style: none;
+  }
+  .footer {
+    background-color: #000000;
+    padding: 70px 0;
+  }
+  .footer-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+
+  .footer-col h4 {
+    font-size: 18px;
+    color: #0ef6cc;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: greenyellow;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover {
+    color: #0ef6cc;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+  }
+
+  /*responsive*/
+  @media (max-width: 767px) {
+    .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 574px) {
+    .footer-col {
+      width: 100%;
+    }
+  }
+
+  /* footer styles */
+  footer {
+    position: absolute;
+    margin-top: 50px;
+    margin-bottom: 0;
+    background: #000000;
+    height: auto;
+    width: 100%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding-top: 40px;
+    color: #0ef6cc;
+  }
+
+  .footer-content {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer-content h3 {
+    font-size: 30px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .footer-content p {
+    display: flex;
+    margin: 10px auto;
+  }
+  .footer-content a {
+    color: #a9b4b2;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .footer_bottom {
+    margin-top: 40px;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .footer_bottom p {
+    text-align: center;
+    font-size: 14px;
+    word-spacing: 2px;
+  }
+
+  .footer_bottom span {
+    opacity: 0.5;
+  }
